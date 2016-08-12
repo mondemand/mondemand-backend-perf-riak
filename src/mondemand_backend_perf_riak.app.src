@@ -1,0 +1,10 @@
+{ application, mondemand_backend_perf_riak,
+  [
+    { description,"A plugin for the mondemand server to send perf events to riak"},
+    { vsn,"0.4.0"},
+    { modules,[]},
+    { registered,[]},
+    { applications, [kernel,stdlib]},
+    { env, [] }
+  ]
+}.

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+config=$1
+
+if test "x$config" = "x" ; then
+  config="dev"
+fi
+
+host=`hostname`
+name="riak_$config"
+
+entop $name@$host -name entop -setcookie riak
