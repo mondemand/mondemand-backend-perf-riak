@@ -11,6 +11,8 @@ which require some shell code to setup.
 ```
 % riak-admin bucket-type create perfid_to_traces '{"props":{"datatype":"map"}}'
 % riak-admin bucket-type create indexes '{"props":{"datatype":"set"}}'
+% riak-admin bucket-type activate perfid_to_traces
+% riak-admin bucket-type activate indexes
 ```
 
 The `perfid_to_traces` bucket is used for storing the collated traces keyed

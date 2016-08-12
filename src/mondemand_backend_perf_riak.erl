@@ -148,9 +148,8 @@ send (State = #state { pid = Pid,
 
   % if we have new indices set them in the state
   {Indices, DateTimes, NewState} =
-    case CheckTime >= Timestamp of
+    case Timestamp >= CheckTime of
       true ->
-        error_logger:info_msg("Refetch indices",[]),
         {NewIndices, NewDatetimes} =
           mondemand_backend_perf_riak_indexes:get_indices(),
         {NewIndices, NewDatetimes,
