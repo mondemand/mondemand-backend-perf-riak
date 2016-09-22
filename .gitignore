@@ -2,4 +2,5 @@ ebin
 deps
 log
 tmp
+.eunit
 .rebar
